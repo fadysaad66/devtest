@@ -1,0 +1,32 @@
+name: get-time
+
+on: push
+
+jobs:
+ job1:
+    name: first job
+    runs-on: ubuntu-latest
+    steps:
+    - name: step one 
+      uses: actions/checout@v4
+    - name: step two 
+      run: echo "Today's date is: $(date +"%Y-%m-%d")"
+ 
+ job2:
+    name: second job     
+    runs-on: mac-latest
+    steps:
+    - name: step one 
+      uses: actions/checout@v4
+    - name: step two
+      run: decho "Today's date is: $(date +"%Y-%m-%d")"
+
+ job3:
+    name: third job
+    runs-on: windows-latest
+    steps:
+    - name: step one
+      uses: actions/checout@v4
+    - name: step two
+      run: Write-Output "Today's date is: $(Get-Date -Format 'yyyy-MM-dd')"
+
