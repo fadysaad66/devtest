@@ -1,0 +1,19 @@
+name: get_ls
+
+on: push
+
+jobs:
+ job1:
+   runs-on: ubuntu-latest
+   steps:
+    - name: get-ls
+      run: echo ls
+ job2: 
+   runs-on: macos-latest
+   steps:
+    - name: get-ls
+      run: echo ls
+ 
+      
+    
+   
