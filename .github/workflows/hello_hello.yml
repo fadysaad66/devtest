@@ -12,8 +12,8 @@ jobs:
     - name: step two
       run: env | sort
  job2:
-  name: none
-  runs-on: windows-latest
+    name: none
+    runs-on: windows-latest
     steps:
     - name: step one
       uses: actions/checkout@v4
