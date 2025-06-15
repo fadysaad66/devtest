@@ -28,5 +28,5 @@ jobs:
     - name: step one
       uses: actions/checkout@v4
     - name: step two
-      run: Write-Output "Today's date is: $(Get-Date -Format 'yyyy-MM-dd')"
+      run: Write-Output Get-Date -| Format 'yyyy-MM-dd'
 
