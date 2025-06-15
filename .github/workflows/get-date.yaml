@@ -14,7 +14,7 @@ jobs:
  
  job2:
     name: second job     
-    runs-on: mac-latest
+    runs-on: macos-latest
     steps:
     - name: step one 
       uses: actions/checkout@v4
@@ -28,5 +28,5 @@ jobs:
     - name: step one
       uses: actions/checkout@v4
     - name: step two
-      run: Write-Output Get-Date -| Format 'yyyy-MM-dd'
+      run: Write-Output Get-Date -Format "MM/dd/yyyy"
 
