@@ -1,0 +1,11 @@
+name: customAction2
+
+on: push
+
+jobs:
+ test:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout
+     uses:  fadysaad66/HiveBox@main
+ 
