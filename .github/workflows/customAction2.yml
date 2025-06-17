@@ -7,7 +7,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: checkout
-   - uses: actions/checkout@v4
+     uses: actions/checkout@v4
    - name: test
-   - uses:  fadysaad66/HiveBox@main
+     uses:  fadysaad66/HiveBox@main
  
