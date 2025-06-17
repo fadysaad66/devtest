@@ -1,0 +1,19 @@
+name: custom_action
+
+on: push
+jobs:
+ test:
+  runs-on: ubuntu-latest
+  steps:
+  - name: test external repo
+    uses: actions/checkout@v4
+    with:
+          repository: fadysaad66/HiveBox
+          path: external-code
+          ref: main 
+  - name: build docker
+    run: |
+       docker build -f ./external-code/phase1.Dockerfile -t app ./external-code
+  - name: run docker
+    run: |
+       docker run app
