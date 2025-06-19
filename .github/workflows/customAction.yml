@@ -4,6 +4,8 @@ on: push
 jobs:
  test:
   runs-on: ubuntu-latest
+  permissions:
+   checks: write
   steps:
   - name: test external repo
     uses: actions/checkout@v4
@@ -17,3 +19,12 @@ jobs:
   - name: run docker
     run: |
        docker run app
+  - name: Run tests
+    run: pytest --junitxml=junit/test-results.xml
+  
+  - name: Upload test results
+    uses: actions/upload-artifact@v3
+    with:
+      name: python-test-results
+      path: junit/test-results.xml
+        
