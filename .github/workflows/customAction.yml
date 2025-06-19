@@ -20,7 +20,8 @@ jobs:
     run: |
        docker run app
   - name: Run tests
-    run: pytest --junitxml=junit/test-results.xml
+    run:  |
+     python -m pytest --verbose --junit-xml=junit.xml
   
   - name: Upload test results
     uses: actions/upload-artifact@v4
